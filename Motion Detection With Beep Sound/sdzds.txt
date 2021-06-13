@@ -1,0 +1,18 @@
+     else:
+         try:
+            try:
+             command3 = query
+             speak('Searching...')
+             res = client.query(query)
+             results = next(res.results).text
+             speak(results)  
+            except:
+                command4 = query
+                results = wikipedia.summary(query, sentences=2)
+                speak(results)
+
+         except:
+             command5 = query
+             url = 'https://www.google.com/search?q=' + command5
+             webbrowser.open(url) 
+             speak("opening google")
