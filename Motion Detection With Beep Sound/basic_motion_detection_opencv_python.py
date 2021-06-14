@@ -1,33 +1,12 @@
 import cv2
 import numpy as np
-import pyttsx3  # pip install pyttsx3
-import speech_recognition as sr  # pip install speechRecognition
-import datetime
-import pyttsx3
-import wikipedia  # pip install wikipedia
-import webbrowser
 import os
-import smtplib
-import pyttsx3.drivers
 import sys
 import random
-import wolframalpha
 import importlib
 import pyaudio
-import cv2
 from pygame import mixer 
 
-print("Initializing Jarvis...")
-
-engine = pyttsx3.init('sapi5')
-client = wolframalpha.Client('6EVA26-EXKKQ6YUW4')
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[len(voices) - 1].id)
-
-
-def speak(text):
-    engine.say(text)
-    engine.runAndWait()
 
 # Starting the mixer 
 mixer.init() 
